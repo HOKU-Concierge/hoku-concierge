@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOKU Concierge | Personalized Travel Support in Hokkaido</title>
-  <meta name="description" content="HOKU Concierge offers warm, English-speaking travel support in Hokkaido. Enjoy local guidance, airport pickup, and personal assistance during your stay." />
-  <meta name="keywords" content="Hokkaido travel support, concierge service, Sapporo tourism, private guide Japan, family trip Hokkaido" />
-  <meta name="author" content="HOKU Concierge" />
+  <meta name="description" content="HOKU Concierge offers warm, English-speaking travel support in Hokkaido. Enjoy local guidance, airport pickup, and personal assistance during your stay.">
+  <meta name="keywords" content="Hokkaido travel support, concierge service, Sapporo tourism, private guide Japan, family trip Hokkaido">
+  <meta name="author" content="HOKU Concierge">
   <style>
     body {
       margin: 0;
@@ -15,7 +15,7 @@
       color: #2c2c2c;
     }
     header {
-      background-image: url('https://images.unsplash.com/photo-1601531637542-ec3ec4696968');
+      background-image: url('https://images.unsplash.com/photo-1601531637542-ec3ec4696968'); /* Sapporo view */
       background-size: cover;
       background-position: center;
       padding: 100px 20px;
@@ -31,13 +31,179 @@
       font-size: 1.2em;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
-    /* 以降は長いため、必要に応じて全文お渡しします */
+    .section {
+      padding: 60px 20px;
+      max-width: 950px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .section p, .section li {
+      line-height: 1.8;
+      font-size: 1.05em;
+    }
+    ul { padding-left: 20px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #eee;
+    }
+    form {
+      max-width: 600px;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    input, textarea {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #c9a46b;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .image-banner {
+      width: 100%;
+      border-radius: 12px;
+      margin: 30px 0;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      .section h2 {
+        font-size: 1.6em;
+      }
+      .section {
+        padding: 40px 16px;
+      }
+    }
   </style>
 </head>
 <body>
+  <nav style="position: fixed; top: 0; width: 100%; background: white; padding: 10px; z-index: 999; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <a href="#about" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">About</a>
+    <a href="#services" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">Services</a>
+    <a href="#faq" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">FAQ</a>
+    <a href="#contact" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">Contact</a>
+  </nav>
+  <div style="height: 60px;"></div> <!-- offset for fixed nav -->
   <header>
     <h1>HOKU Concierge</h1>
     <p>Personal, English-speaking support throughout your luxury journey in Hokkaido</p>
   </header>
+
+  <section class="section" id="about">
+    <img src="https://images.unsplash.com/photo-1579403124614-197f69d8187b" alt="Snowy landscape in Sapporo" class="image-banner">
+    <h2>About Us</h2>
+    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Couple in Japan" class="image-banner">
+    <p>
+      We are a husband and wife based in Hokkaido, with over 35 years of life experience in this beautiful region. We’re deeply familiar with local culture, seasonal highlights, hidden gems, and family-friendly options. Whether you’re looking for meaningful experiences, educational support for your children, or simply someone to talk to about your ideas — we’re here to help.
+    </p>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Service</h2>
+    <img src="https://images.unsplash.com/photo-1559793934-dc7c1ff5079d" alt="Concierge desk and local advice" class="image-banner">
+    <ul>
+      <li>Before your trip, we’ll connect with you via Zoom or email to understand your needs and create a fully personalized travel plan just for you.</li>
+      <li>Personal concierge service during your stay (reservation support, translation, suggestions)</li>
+      <li>Free airport pickup and drop-off (within legal guidelines)</li>
+      <li>Help with understanding the area: shops, nature, sightseeing spots</li>
+      <li>Ongoing LINE or WhatsApp communication for live assistance during your trip</li>
+      <li>Local lifestyle insight and family-friendly recommendations</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Service Policy</h2>
+    <table>
+      <tr><th>We Can</th><th>We Cannot</th></tr>
+      <tr><td>Provide live concierge-style support in English</td><td>Speak or reply in Chinese</td></tr>
+      <tr><td>Offer free airport transfers as part of concierge service</td><td>Charge for private transport services (no unlicensed driving)</td></tr>
+      <tr><td>Assist with communication during travel via LINE/WhatsApp</td><td>Act as travel agents or tour operators</td></tr>
+      <tr><td>Introduce trusted local accommodations or service providers</td><td>Act as a real estate agent or close contracts</td></tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Pricing</h2>
+    <p>
+      Our concierge service starts at <strong>$1,500 USD per stay</strong>.<br>
+      Please note that accommodation, meals, and third-party services are paid directly by the customer.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <img src="https://images.unsplash.com/photo-1618556448265-d17a057d40e5" alt="Sapporo city night view" class="image-banner">
+    <p>
+      We provide high-quality, personal hospitality — not mass tourism. With decades of experience in Hokkaido, we’re more than guides — we’re trusted friends you can rely on. From ski getaways to peaceful summer retreats, we help make your journey smooth and memorable.
+    </p>
+  </section>
+
+  <section class="section" id="faq">
+    <h2>FAQ</h2>
+    <h3>Do you speak English?</h3>
+    <p>Yes, we can communicate in English comfortably and are used to supporting English-speaking visitors.</p>
+
+    <h3>Can I contact you anytime during my stay?</h3>
+    <p>Absolutely. We're available on LINE or WhatsApp during your trip for quick support, help, or questions.</p>
+
+    <h3>Is airport pickup really free?</h3>
+    <p>Yes, airport pickup and drop-off are complimentary parts of our concierge service (within legal and safe boundaries).</p>
+
+    <h3>Can you help me make a reservation in Japanese?</h3>
+    <p>Yes. If you’re not comfortable speaking Japanese, we can help make restaurant or activity bookings on your behalf.</p>
+
+    <h3>Do you arrange tours or real estate?</h3>
+    <p>No. We are not a travel agency or real estate business. We focus on concierge-style support and guidance.</p>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Tell us what you're looking for..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>Contact Us via Messaging Apps</h2>
+    <p>You can also reach us anytime through LINE or WhatsApp for quick questions or support during your stay.</p>
+    <p>
+      <a href="https://line.me/R/ti/p/@yourlineid" target="_blank" style="margin-right: 20px; font-size: 1.1em;">💬 Message us on LINE</a>
+      <a href="https://wa.me/1234567890" target="_blank" style="font-size: 1.1em;">💬 Chat on WhatsApp</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HOKU Concierge. All rights reserved.</p>
+  </footer>
 </body>
 </html>
