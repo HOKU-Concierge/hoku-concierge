@@ -4,220 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOKU Concierge | Personalized Travel Support in Hokkaido</title>
-  <meta name="description" content="HOKU Concierge offers warm, English-speaking travel support in Hokkaido. Enjoy local guidance, airport pickup, and personal assistance during your stay.">
-  <meta name="keywords" content="Hokkaido travel support, concierge service, Sapporo tourism, private guide Japan, family trip Hokkaido">
-  <meta name="author" content="HOKU Concierge">
+  <meta name="description" content="HOKU Concierge offers bespoke, English-speaking travel support in Hokkaido—custom itineraries, free airport pickup, and 24/7 concierge assistance.">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #f5f3ef;
-      color: #2c2c2c;
+      font-family: 'Merriweather', serif;
+      background-color: #faf9f5;
+      color: #333;
+      line-height: 1.6;
     }
+    a { color: #c9a46b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Navigation */
+    nav {
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+    nav ul { display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 1rem; }
+    nav ul li { font-weight: 600; }
+
+    /* Hero */
     header {
-      background-image: url('https://images.unsplash.com/photo-1601531637542-ec3ec4696968');
-      background-size: cover;
-      background-position: center;
-      padding: 100px 20px;
-      color: #fdf6e3;
+      background: url('A_high-resolution_digital_photograph_captures_a_pa.png') center/cover;
+      height: 80vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
       text-align: center;
+      padding: 0 1rem;
     }
     header h1 {
-      font-size: 2.6em;
-      margin-bottom: 10px;
-      color: #ffffff;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
     header p {
-      font-size: 1.2em;
-      color: #f0f0f0;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      font-size: 1.25rem;
+      max-width: 600px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
     }
-    .section {
-      padding: 60px 20px;
-      max-width: 950px;
-      margin: auto;
-    }
+
+    /* Sections */
+    .section { padding: 4rem 1rem; max-width: 1000px; margin: auto; }
     .section h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #444;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c2c2c;
+      position: relative;
     }
-    .section p, .section li {
-      line-height: 1.8;
-      font-size: 1.05em;
+    .section h2::after {
+      content: '';
+      width: 50px; height: 4px;
+      background: #c9a46b;
+      position: absolute; bottom: -8px; left: 0;
     }
-    ul { padding-left: 20px; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 12px;
+    .section p { margin-bottom: 1.5rem; }
+    .section ul { list-style: disc inside; margin-bottom: 1.5rem; }
+
+    /* Images */
+    .image-banner { width: 100%; border-radius: 12px; margin: 2rem 0; }
+
+    /* Pricing Table */
+    .pricing-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
       text-align: center;
     }
-    th {
-      background-color: #eee;
-    }
-    form {
-      max-width: 600px;
-      margin: 40px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    input, textarea {
-      padding: 14px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1em;
-    }
-    button {
-      background-color: #c9a46b;
-      color: white;
-      border: none;
-      padding: 14px;
-      font-size: 1em;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .image-banner {
-      width: 100%;
-      border-radius: 12px;
-      margin: 30px 0;
-      max-height: 400px;
-      object-fit: cover;
-    }
-    @media screen and (max-width: 768px) {
-      header h1 {
-        font-size: 2em;
-      }
-      header p {
-        font-size: 1em;
-      }
-      .section h2 {
-        font-size: 1.6em;
-      }
-      .section {
-        padding: 40px 16px;
-      }
+    .pricing-table th { background: #f0efeb; font-family: 'Open Sans', sans-serif; }
+
+    /* Contact */
+    form { display: grid; gap: 1rem; }
+    input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; }
+    button { background: #c9a46b; color: #fff; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 8px; cursor: pointer; }
+    button:hover { background: #b88d4b; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem 1rem; background: #2c2c2c; color: #fff; font-size: 0.9rem; }
+
+    /* Responsive */
+    @media(max-width:768px) {
+      header h1 { font-size: 2.5rem; }
+      nav ul { flex-wrap: wrap; gap: 1rem; }
+      .section h2 { font-size: 1.75rem; }
     }
   </style>
 </head>
 <body>
-  <nav style="position: fixed; top: 0; width: 100%; background: white; padding: 10px; z-index: 999; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <a href="#about" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">About</a>
-    <a href="#services" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">Services</a>
-    <a href="#faq" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">FAQ</a>
-    <a href="#contact" style="margin: 0 15px; color: #2c2c2c; text-decoration: none; font-weight: bold;">Contact</a>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
-  <div style="height: 60px;"></div> <!-- offset for fixed nav -->
+
   <header>
-    <img src="Sapporo Night.jpeg" alt="Sapporo Night View" class="image-banner"> <!-- Hero image -->
-    <h1>✨ HOKU Concierge ✨
-    <p>Personal, English-speaking support throughout your luxury journey in Hokkaido</p>
+    <h1>✨ HOKU Concierge ✨</h1>
+    <p>Bespoke travel support in Hokkaido—custom itineraries, free airport pickup, and personal concierge assistance.</p>
   </header>
 
   <section class="section" id="about">
-    
     <h2>About Us</h2>
-    
-    <p>
-      We are a husband and wife based in Hokkaido, with over 35 years of life experience in this beautiful region. We’re deeply familiar with local culture, seasonal highlights, hidden gems, and family-friendly options. Whether you’re looking for meaningful experiences, educational support for your children, or simply someone to talk to about your ideas — we’re here to help.
-    </p>
+    <p>We are a local husband-and-wife team with over 35 years in Hokkaido. We provide heartfelt, English-speaking support to help you live and explore this region like a local.</p>
   </section>
 
   <section class="section" id="services">
-    <h2>Our Service</h2>
-    <img src="https://images.unsplash.com/photo-1600294037681-6b71cfb8e1d7" alt="Concierge desk and local advice" class="image-banner">
+    <h2>Our Services</h2>
     <ul>
-      <li>Before your trip, we’ll connect with you via Zoom or email to understand your needs and create a fully personalized travel plan just for you.</li>
-      <li>Personal concierge service during your stay (reservation support, translation, suggestions)</li>
-      <li>Free airport pickup and drop-off (within legal guidelines)</li>
-      <li>Help with understanding the area: shops, nature, sightseeing spots</li>
-      <li>Ongoing LINE or WhatsApp communication for live assistance during your trip</li>
-      <li>Local lifestyle insight and family-friendly recommendations</li>
+      <li>💡 Pre-trip Zoom & email consultation to craft your unique itinerary</li>
+      <li>🚗 Free airport pickup & drop-off (in a licensed vehicle)</li>
+      <li>🍽️ Restaurant & activity bookings with seamless translation</li>
+      <li>📲 24/7 LINE & WhatsApp support during your stay</li>
+      <li>🏔️ Insider tips on hidden gems, seasonal highlights, and family-friendly spots</li>
     </ul>
   </section>
 
-  <section class="section">
-    <h2>Service Policy</h2>
-    <table>
-      <tr><th>We Can</th><th>We Cannot</th></tr>
-      <tr><td>Provide live concierge-style support in English</td><td>Speak or reply in Chinese</td></tr>
-      <tr><td>Offer free airport transfers as part of concierge service</td><td>Charge for private transport services (no unlicensed driving)</td></tr>
-      <tr><td>Assist with communication during travel via LINE/WhatsApp</td><td>Act as travel agents or tour operators</td></tr>
-      <tr><td>Introduce trusted local accommodations or service providers</td><td>Act as a real estate agent or close contracts</td></tr>
-    </table>
-  </section>
-
-  <section class="section">
+  <section class="section" id="pricing">
     <h2>Pricing</h2>
-    <p>
-      Our concierge service starts at <strong>$1,500 USD per stay</strong>, which includes:
-    </p>
-    <ul>
-      <li>✨ Creation of a fully customized travel plan tailored to your preferences</li>
-      <li>✨ Reservation support and translation assistance</li>
-      <li>✨ Free airport pickup and drop-off (within legal guidelines)</li>
-      <li>✨ Ongoing support via LINE or WhatsApp during your stay, including for long-term stays (except late-night hours)</li>
-    </ul>
-    <p>
-      Additional optional services (upon request):
-    </p>
-    <ul>
-      <li>🎿 Personal activity accompaniment or interpretation: <strong>$100–$200/day</strong></li>
-      <li>🏠 Local guidance for finding long-stay housing: <strong>$300 flat fee</strong></li>
-      <li>👶 Family coordination (child-friendly places, education insight): <strong>$150 per trip</strong></li>
-    </ul>
-    <p>
-      Please note that accommodation, meals, and third-party services are paid directly by the customer.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Why Choose Us?</h2>
-    <img src="https://images.unsplash.com/photo-1583000080190-0f8d13be85c9" alt="Sapporo city night view" class="image-banner">
-    <p>
-      We provide high-quality, personal hospitality — not mass tourism. With decades of experience in Hokkaido, we’re more than guides — we’re trusted friends you can rely on. From ski getaways to peaceful summer retreats, we help make your journey smooth and memorable.
-    </p>
+    <table class="pricing-table">
+      <thead>
+        <tr><th>Plan</th><th>Includes</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Standard Concierge</td><td>Full itinerary, bookings, translation, free pickup</td><td>$1,500/stay</td></tr>
+        <tr><td>Activity Guide</td><td>On-site accompaniment & interpretation</td><td>$150/hr</td></tr>
+        <tr><td>Family Support</td><td>Childcare advice, school visits, family logistics</td><td>$150/trip</td></tr>
+        <tr><td>Housing Assistance</td><td>Consultation on long-stay options</td><td>$300 flat fee</td></tr>
+      </tbody>
+    </table>
   </section>
 
   <section class="section" id="faq">
     <h2>FAQ</h2>
-    <h3>Do you speak English?</h3>
-    <p>Yes, we can communicate in English comfortably and are used to supporting English-speaking visitors.</p>
-
-    <h3>Can I contact you anytime during my stay?</h3>
-    <p>Absolutely. We're available on LINE or WhatsApp during your trip for quick support, help, or questions.</p>
-
-    <h3>Is airport pickup really free?</h3>
-    <p>Yes, airport pickup and drop-off are complimentary parts of our concierge service (within legal and safe boundaries).</p>
-
-    <h3>Can you help me make a reservation in Japanese?</h3>
-    <p>Yes. If you’re not comfortable speaking Japanese, we can help make restaurant or activity bookings on your behalf.</p>
-
-    <h3>Do you arrange tours or real estate?</h3>
-    <p>No. We are not a travel agency or real estate business. We focus on concierge-style support and guidance.</p>
+    <p><strong>Q:</strong> Do you speak English?<br><strong>A:</strong> Yes, fluently and warmly.</p>
+    <p><strong>Q:</strong> Is airport pickup really free?<br><strong>A:</strong> Absolutely, as part of your concierge service.</p>
+    <p><strong>Q:</strong> Can you make bookings on my behalf?<br><strong>A:</strong> Yes, restaurant, activities, and more.</p>
+    <p><strong>Q:</strong> Are you a travel agency?<br><strong>A:</strong> No, we focus on personalized concierge support.</p>
+  </section>
 
   <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/saitomami1022@gmail.com" method="POST">
+    <form action="https://formsubmit.co/yourname@example.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Tell us what you're looking for..." required></textarea>
+      <textarea name="message" rows="5" placeholder="Tell us your needs..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </section>
-
-  <section class="section">
-    <h2>Contact Us via Messaging Apps</h2>
-    <p>You can also reach us anytime through LINE or WhatsApp for quick questions or support during your stay.</p>
-    <p>
-      <a href="https://line.me/R/ti/p/@raijamaica" target="_blank" style="margin-right: 20px; font-size: 1.1em;">💬 Message us on LINE</a>
-      <a href="https://wa.me/+818040409739" target="_blank" style="font-size: 1.1em;">💬 Chat on WhatsApp</a>
+    <p style="margin-top:1rem;">
+      💬 <a href="https://line.me/R/ti/p/@hokuconcierge" target="_blank">LINE Chat</a> &nbsp; | &nbsp;
+      💬 <a href="https://wa.me/+818040409739" target="_blank">WhatsApp Chat</a>
     </p>
   </section>
 
