@@ -3,99 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOKU Concierge | Personalized Travel Support in Hokkaido</title>
-  <meta name="description" content="HOKU Concierge offers bespoke, English-speaking travel support in Hokkaido—custom itineraries, free airport pickup, and 24/7 concierge assistance.">
+  <title>HOKU Concierge | Craft Your Dream Hokkaido Journey</title>
+  <meta name="description" content="Experience Hokkaido like never before with bespoke concierge service: custom itineraries, free airport pickup, insider tips, and 24/7 support.">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Merriweather', serif;
-      background-color: #faf9f5;
-      color: #333;
-      line-height: 1.6;
-    }
-    a { color: #c9a46b; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Merriweather', serif; background:#faf9f5; color:#333; line-height:1.6; }
+    a { color:#c9a46b; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    img { max-width:100%; display:block; }
     /* Navigation */
-    nav {
-      position: sticky; top: 0;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 100;
-    }
-    nav ul { display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 1rem; }
-    nav ul li { font-weight: 600; }
-
+    nav { position:sticky; top:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(8px); box-shadow:0 2px 4px rgba(0,0,0,0.1); z-index:100; }
+    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; padding:1rem; }
+    nav ul li { font-weight:600; }
     /* Hero */
     header {
-      background: url('A_high-resolution_digital_photograph_captures_a_pa.png') no-repeat center center;
-      background-size: contain;
+      /* Lightened background with brighter overlay */
+      background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('https://raw.githubusercontent.com/HOKU-Concierge/hoku-concierge/main/hero.jpg') top center/cover no-repeat;
+      filter: brightness(1.1);
       height: 80vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30vh;
       text-align: center;
       padding: 0 1rem;
     }
     header h1 {
       font-family: 'Open Sans', sans-serif;
       font-size: 3rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      /* Gradient text effect */
+      background: linear-gradient(90deg, #FFEEE4, #FFD1A1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
     }
     header p {
       font-size: 1.25rem;
+      /* Brightened text color for readability */
+      color: #FFF8ED;
       max-width: 600px;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+      margin-bottom: 3rem;
     }
-
+    .btn-primary {
+      /* Gradient button for prominence */
+      background: linear-gradient(90deg, #c9a46b, #b88d4b);
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+      margin-top: 1rem;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #b88d4b, #c9a46b);
+      transform: translateY(-2px);
+    }
+    .btn-primary:hover {
+      background:#b88d4b;
+    }
+    .btn-primary:hover { background:#b88d4b; }
     /* Sections */
-    .section { padding: 4rem 1rem; max-width: 1000px; margin: auto; }
-    .section h2 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #2c2c2c;
-      position: relative;
-    }
-    .section h2::after {
-      content: '';
-      width: 50px; height: 4px;
-      background: #c9a46b;
-      position: absolute; bottom: -8px; left: 0;
-    }
-    .section p { margin-bottom: 1.5rem; }
-    .section ul { list-style: disc inside; margin-bottom: 1.5rem; }
-
-    /* Images */
-    .image-banner { width: 100%; border-radius: 12px; margin: 2rem 0; }
-
+    .section { padding:4rem 1rem; max-width:1000px; margin:auto; }
+    .section h2 { font-family:'Open Sans', sans-serif; font-size:2rem; margin-bottom:1rem; color:#2c2c2c; position:relative; }
+    .section h2::after { content:''; width:50px; height:4px; background:#c9a46b; position:absolute; bottom:-8px; left:0; }
+    .section p { margin-bottom:1.5rem; }
+    .section ul { list-style:disc inside; margin-bottom:1.5rem; }
+    /* Gallery */
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:2rem; }
+    /* Testimonials */
+    .testimonials { background:#fffef9; padding:4rem 1rem; }
+    .testimonial { margin-bottom:2rem; font-style:italic; }
+    .testimonial cite { display:block; text-align:right; font-style:normal; margin-top:0.5rem; font-weight:600; }
     /* Pricing Table */
-    .pricing-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
-    .pricing-table th, .pricing-table td {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      text-align: center;
-    }
-    .pricing-table th { background: #f0efeb; font-family: 'Open Sans', sans-serif; }
-
+    .pricing-table { width:100%; border-collapse:collapse; margin:2rem 0; }
+    .pricing-table th,.pricing-table td { border:1px solid #ddd; padding:1rem; text-align:center; }
+    .pricing-table th { background:#f0efeb; font-family:'Open Sans',sans-serif; }
     /* Contact */
-    form { display: grid; gap: 1rem; }
-    input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; }
-    button { background: #c9a46b; color: #fff; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 8px; cursor: pointer; }
-    button:hover { background: #b88d4b; }
-
+    form { display:grid; gap:1rem; }
+    input,textarea { width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:8px; }
     /* Footer */
-    footer { text-align: center; padding: 2rem 1rem; background: #2c2c2c; color: #fff; font-size: 0.9rem; }
-
+    footer { text-align:center; padding:2rem 1rem; background:#2c2c2c; color:#fff; font-size:0.9rem; }
     /* Responsive */
-    @media(max-width:768px) {
-      header h1 { font-size: 2.5rem; }
-      nav ul { flex-wrap: wrap; gap: 1rem; }
-      .section h2 { font-size: 1.75rem; }
-    }
+    @media(max-width:768px){header h1{font-size:2.5rem;} nav ul{flex-wrap:wrap;gap:1rem;} .section h2{font-size:1.75rem;}}
   </style>
 </head>
 <body>
@@ -104,54 +100,109 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <header>
-    <h1>✨ HOKU Concierge ✨</h1>
-    <p>Bespoke travel support in Hokkaido—custom itineraries, free airport pickup, and personal concierge assistance.</p>
+    <h1>Craft Your Dream Hokkaido Journey</h1>
+    <p>Personalized concierge service in Hokkaido: custom itineraries, free airport pickup, and 24/7 support.</p>
+    
   </header>
+
+  <!-- CTA Button Below Hero -->
+  <div class="section" style="text-align:center;">
+    <button class="btn-primary" onclick="location.href='#contact'">Book a Free Consultation</button>
+  </div>
+</header>
 
   <section class="section" id="about">
     <h2>About Us</h2>
-    <p>We are a local husband-and-wife team with over 35 years in Hokkaido. We provide heartfelt, English-speaking support to help you live and explore this region like a local.</p>
+    <p>Our lead concierge is a dedicated mother of three, born and raised in Hokkaido, whose deep local insights make every trip unforgettable. Her husband plays a supportive role behind the scenes, ensuring seamless logistics and personalized attention throughout your stay.</p>
   </section>
 
   <section class="section" id="services">
-    <img src="A_photograph_features_a_portrait_of_a_professional.png" alt="Our Services Concierge Portrait" class="image-banner" alt="Our Services Concierge" class="image-banner">
-    <h2>Our Services</h2>
-    <ul>
-      <li>💡 Pre-trip Zoom & email consultation to craft your unique itinerary</li>
-      <li>🚗 Free airport pickup & drop-off (in a licensed vehicle)</li>
-      <li>🍽️ Restaurant & activity bookings with seamless translation</li>
-      <li>📲 24/7 LINE & WhatsApp support during your stay</li>
-      <li>🏔️ Insider tips on hidden gems, seasonal highlights, and family-friendly spots</li>
-    </ul>
+    <p>🟢 We offer 24/7 support via LINE & WhatsApp (messages sent after midnight JST will be replied from 8:00 AM next day).</p>
+    <p>🛑 Please note: We provide remote support and guidance only; we do not physically accompany you.</p>
   </section>
 
   <section class="section" id="pricing">
-    <h2>Pricing</h2>
-    <table class="pricing-table">
-      <thead>
-        <tr><th>Plan</th><th>Includes</th><th>Price</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Standard Concierge</td><td>Full itinerary, bookings, translation, free pickup</td><td>$1,500/stay</td></tr>
-        <tr><td>Activity Guide</td><td>On-site accompaniment & interpretation</td><td>$150/hr</td></tr>
-        <tr><td>Family Support</td><td>Childcare advice, school visits, family logistics</td><td>$150/trip</td></tr>
-        <tr><td>Housing Assistance</td><td>Consultation on long-stay options</td><td>$300 flat fee</td></tr>
-      </tbody>
-    </table>
+  </section>
+
+  <section class="section" id="sample-plan">
+    <h2>Sample Itinerary (2 Nights / 3 Days)</h2>
+    <ul>
+      <li><strong>Day 1:</strong>
+        <ul>
+          <li>10:00 AM – Scenic seaplane flight over Shiretoko National Park</li>
+          <li>12:00 PM – Fresh sushi breakfast at Nijo Market with a local chef</li>
+          <li>2:00 PM – Private glass-blowing workshop in Otaru Canal District</li>
+          <li>6:00 PM – Luxury onsen experience with river view at a ryokan</li>
+        </ul>
+      </li>
+      <li><strong>Day 2:</strong>
+        <ul>
+          <li>8:00 AM – Sunrise snowshoe trek through Niseko’s powder fields</li>
+          <li>11:30 AM – Miso ramen cooking class with renowned local chef</li>
+          <li>2:00 PM – Curated art tour at Hokkaido Museum of Modern Art</li>
+          <li>7:00 PM – Crab feast dinner with sake pairing in a hidden izakaya</li>
+        </ul>
+      </li>
+      <li><strong>Day 3:</strong>
+        <ul>
+          <li>9:00 AM – Farm-to-table brunch at a working dairy farm</li>
+          <li>11:30 AM – Drift ice sightseeing cruise with onboard commentary</li>
+          <li>2:00 PM – Guided stroll through a snow-lantern festival</li>
+          <li>5:00 PM – Stargazing hot springs under Hokkaido’s clear night sky</li>
+        </ul>
+      </li>
+    </ul>
+    <p><em>Every trip is unique—this is just a taste. Your personalized itinerary can include any extraordinary experience you desire.</em></p>
+  </section>
+
+  <section class="section" id="long-term">
+    <h2>Long-Term Stay Support (1 Month+)</h2>
+    <ul>
+      <li>🏠 Monthly apartment or condominium contract assistance and negotiation</li>
+      <li>🎒 Guidance on local schools, daycare options, and education enrollment</li>
+      <li>📑 Help with utility setup, mobile SIM cards, and visa/documentation</li>
+      <li>🏡 Neighborhood orientation: where to shop, medical clinics, community events</li>
+      <li>🤝 Introductions to local networks: language classes, cultural clubs, expat groups</li>
+    </ul>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="Sauna.png" alt="Outdoor Sauna in Hokkaido">
+      <img src="Baseball.png" alt="Baseball Game at Es Con Field">
+      <img src="gallery3.jpg" alt="Countryside Cycling">
+      <img src="gallery4.jpg" alt="Family Enjoying Hot Springs">
+    </div>
+  </section>
+
+  <section class="testimonials section" id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      “HOKU Concierge made our trip seamless! We felt like VIPs.”<br><cite>- Emily, USA</cite>
+    </div>
+    <div class="testimonial">
+      “My kids loved the personalized activities. Highly recommended!”<br><cite>- Marcus, Australia</cite>
+    </div>
+    <div class="testimonial">
+      “Amazing local insights and flexible support. Five stars!”<br><cite>- Sophie, UK</cite>
+    </div>
   </section>
 
   <section class="section" id="faq">
     <h2>FAQ</h2>
     <p><strong>Q:</strong> Do you speak English?<br><strong>A:</strong> Yes, fluently and warmly.</p>
-    <p><strong>Q:</strong> Is airport pickup really free?<br><strong>A:</strong> Absolutely, as part of your concierge service.</p>
-    <p><strong>Q:</strong> Can you make bookings on my behalf?<br><strong>A:</strong> Yes, restaurant, activities, and more.</p>
-    <p><strong>Q:</strong> Are you a travel agency?<br><strong>A:</strong> No, we focus on personalized concierge support.</p>
+    <p><strong>Q:</strong> Is airport pickup free?<br><strong>A:</strong> Absolutely, as part of your concierge service.</p>
+    <p><strong>Q:</strong> Can you make bookings on my behalf?<br><strong>A:</strong> Yes, restaurants, activities, and more.</p>
+    <p><strong>Q:</strong> Are you a travel agency?<br><strong>A:</strong> No, we focus solely on personalized concierge support.</p>
   </section>
 
   <section class="section" id="contact">
@@ -160,7 +211,7 @@
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" rows="5" placeholder="Tell us your needs..." required></textarea>
-      <button type="submit">Send Message</button>
+      <button class="btn-primary" type="submit">Send Message</button>
     </form>
     <p style="margin-top:1rem;">
       💬 <a href="https://line.me/R/ti/p/@raijamaica" target="_blank">LINE Chat</a> &nbsp; | &nbsp;
