@@ -10,7 +10,7 @@
     /* Reset & Base */
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { font-family:'Merriweather', serif; background:#faf9f5; color:#333; line-height:1.6; }
+    body { font-family:'Merriweather', serif; background:#faf9f5; color:#333; line-height:1.6; overflow-x: hidden; }
     a { color:#c9a46b; text-decoration:none; }
     a:hover { text-decoration:underline; }
     img { max-width:100%; display:block; }
@@ -91,8 +91,18 @@
     /* Footer */
     footer { text-align:center; padding:2rem 1rem; background:#2c2c2c; color:#fff; font-size:0.9rem; }
     /* Responsive */
-    @media(max-width:768px){header h1{font-size:2.5rem;} nav ul{flex-wrap:wrap;gap:1rem;} .section h2{font-size:1.75rem;}}
+    @media(max-width:768px){
+  header h1 { font-size: 2rem; }
+  nav ul { flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; }
+  .section h2 { font-size: 1.5rem; text-align: center; }
+  .btn-primary { padding: 0.75rem 1.5rem; font-size: 1rem; }
+  .gallery img { height: auto; }
+  .pricing-table th, .pricing-table td { font-size: 0.9rem; padding: 0.75rem; }
+  form input, form textarea { font-size: 1rem; }
+}
   </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
   <nav>
@@ -100,7 +110,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+      
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -111,10 +121,13 @@
   <img src="HOKU6.png" alt="HOKU Concierge Logo" style="width: 100vw; height: auto; display: block;">
 </header>
 
-  <div style="text-align: center; background: #fffef9; padding: 2rem 1rem; animation: fadeInUp 1.2s ease-out;">
+  <section class="section" style="text-align: center; background: #fffef9; padding: 2rem 1rem;" data-aos="fade-up">
+  <div style="max-width: 700px; margin: auto;">
+
   <h1 style="font-family: 'Open Sans', sans-serif; font-size: 2.25rem; color: #2c2c2c; margin-bottom: 1rem;">Experience Hokkaido Like Never Before</h1>
   <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem auto; color: #555;">Custom-made journeys, warm local support, and unforgettable moments—designed just for you and your family.</p>
-  <a href="#contact" class="btn-primary">Start Planning</a>
+  <a href="#contact" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Start Planning</a>
+  </div>
 </div>
 <a href="#about" style="display: block; text-align: center; margin-top: 1rem; font-size: 1.5rem; color: #c9a46b; animation: bounce 2s infinite;">▼ Scroll to Learn More</a>
 
@@ -146,7 +159,7 @@
 
   <section class="section" id="services">
   <h2>Our Services</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: start;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
     <div>
       <img src="https://cdn-icons-png.flaticon.com/512/4206/4206337.png" alt="24/7 Support Icon" style="width:100%; max-height:180px; object-fit:contain; margin-bottom: 1rem;">
       <p>🟢 24/7 support via LINE & WhatsApp (replies after midnight JST are sent after 8:00 AM).</p>
@@ -161,13 +174,15 @@
     </div>
     <div>
       <img src="https://cdn-icons-png.flaticon.com/512/4169/4169027.png" alt="Nature Experience Icon" style="width:100%; max-height:180px; object-fit:contain; margin-bottom: 1rem;">
-      <ul>
-        <li>🌲 Nature-based experiences: farm visits, seasonal harvesting, crafts</li>
-        <li>🏠 Monthly rental contract assistance</li>
-        <li>📑 Help with SIM cards, utilities, documentation</li>
-        <li>🏡 Neighborhood orientation</li>
-        <li>🤝 Introductions to local networks</li>
-      </ul>
+      <p>🌲 Nature-based experiences: farm visits, seasonal harvesting, and craft workshops for families.</p>
+    </div>
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/702/702797.png" alt="Japanese Lantern Icon" style="width:100%; max-height:180px; object-fit:contain; margin-bottom: 1rem;">
+      <p>🎎 Introduction to local festivals and community events in Hokkaido.</p>
+    </div>
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/2951/2951100.png" alt="Messaging Support Icon" style="width:100%; max-height:180px; object-fit:contain; margin-bottom: 1rem;">
+      <p>📩 Reservation and communication support via LINE/WhatsApp when English is not available.</p>
     </div>
   </div>
 </section>
@@ -195,7 +210,7 @@
 <section class="section" id="pricing">
   <h2>Pricing</h2>
   <p style="margin-bottom: 1.5rem;">We believe in transparent and simple pricing based on your length of stay:</p>
-  <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+  <div style="display: flex; flex-direction: column; gap: 1.5rem;" data-aos="fade-up" data-aos-delay="100">
     <div style="background: #fff; padding: 2rem; border: 1px solid #eee; border-radius: 12px;">
       <h3>Standard Concierge</h3>
       <p>• Custom itinerary creation<br>• Booking support and translation<br>• 24/7 chat support</p>
@@ -208,7 +223,7 @@
     </div>
   </div>
   <div style="text-align:center; margin-top:2rem;">
-    <a href="https://www.paypal.me/hokuconcierge" target="_blank" class="btn-primary">Pay via PayPal</a>
+    <a href="https://www.paypal.me/hokuconcierge" target="_blank" class="btn-primary" data-aos="zoom-in">💳 Pay via PayPal</a>
   </div>
 </section>
 <section class="section" id="sample-plan">
@@ -253,15 +268,7 @@
   
   </section>
 
-  <section class="section" id="gallery">
-  <h2>Gallery</h2>
-  <div style="overflow:hidden; white-space:nowrap;">
-    <img src="Sauna.png" alt="Outdoor Sauna in Hokkaido" style="width:100%; max-height:500px; object-fit:cover; display:inline-block;">
-    <img src="Baseball.png" alt="Baseball Game at Es Con Field" style="width:100%; max-height:500px; object-fit:cover; display:inline-block;">
-    <img src="gallery3.jpg" alt="Countryside Cycling" style="width:100%; max-height:500px; object-fit:cover; display:inline-block;">
-    <img src="gallery4.jpg" alt="Family Enjoying Hot Springs" style="width:100%; max-height:500px; object-fit:cover; display:inline-block;">
-  </div>
-</section>
+  
 
   <section class="section" id="highlights">
   <h2>Travel Highlights</h2>
@@ -322,5 +329,6 @@
   <footer>
     <p>&copy; 2025 HOKU Concierge. All rights reserved.</p>
   </footer>
+<script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
