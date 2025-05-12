@@ -107,13 +107,28 @@
     </ul>
   </nav>
 
-  <header style="background: url('hoku_hero_1920x900.jpg') top center / 100% auto no-repeat; height: auto; width: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5vh 1rem 10vh;">
-  <img src="HOKU6.png" alt="HOKU Concierge Logo" style="width: clamp(200px, 40vw, 480px); height: auto; margin-bottom: 2rem;">
+  <header style="padding: 0; margin: 0;">
+  <img src="HOKU6.png" alt="HOKU Concierge Logo" style="width: 100vw; height: auto; display: block;">
 </header>
 
-  <!-- CTA Button Below Hero -->
-  
+  <div style="text-align: center; background: #fffef9; padding: 2rem 1rem; animation: fadeInUp 1.2s ease-out;">
+  <h1 style="font-family: 'Open Sans', sans-serif; font-size: 2.25rem; color: #2c2c2c; margin-bottom: 1rem;">Experience Hokkaido Like Never Before</h1>
+  <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem auto; color: #555;">Custom-made journeys, warm local support, and unforgettable moments—designed just for you and your family.</p>
+  <a href="#contact" class="btn-primary">Start Planning</a>
+</div>
+<a href="#about" style="display: block; text-align: center; margin-top: 1rem; font-size: 1.5rem; color: #c9a46b; animation: bounce 2s infinite;">▼ Scroll to Learn More</a>
+
 </header>
+<style>
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+</style>
 
   <section class="section" id="about">
   <h2>About Us</h2>
